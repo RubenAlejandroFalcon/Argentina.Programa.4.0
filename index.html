@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://rickandmorty-adaitw-vanesazalazar.vercel.app/images/rick-and-morty-.png">
+    <!-- Argentina Programa 4.0 C172-->
+    <!-- Opté por traducirlo al español-->
+    <title>Proyecto Final - Rick & Morty</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="https://rickandmorty-finalproject-mairaledesma.vercel.app/img/rickandmorty-image.png"
+            alt="Rick and Morty image"/>
+        <img src="https://rickandmorty-finalproject-mairaledesma.vercel.app/img/logo-rickandmorty.png" 
+            alt="Rick and Morty logo" />
+      </div>
+      <!-- <h1>Rick & Morty</h1> -->
+      <nav>
+        <ul>
+          <li><a href="#sinopsis">Sinopsis</a></li>
+          <li><a href="#personajes">Personajes</a></li>
+          <li><a href="#ver-serie">Mirá la serie</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Comienzo sección de sinopsis -->
+      <section id="sinopsis" class="sinopsis">
+        <img src="" alt="" />
+        <h2>Sinopsis</h2>
+        <p> 
+            La serie sigue las desventuras del cínico científico loco Rick Sánchez y su nieto Morty Smith, de buen corazón pero inquieto, que dividen su tiempo entre la vida doméstica y las aventuras interdimensionales que tienen lugar a través de un número infinito de realidades, a menudo viajando a otros planetas y dimensiones a través de portales y en el platillo volante de Rick. El concepto general de Rick y Morty se basa en dos escenarios conflictivos: un drama familiar doméstico y un abuelo alcohólico que arrastra a su abuelo a hacer travesuras.
+        </p>
+        <p>Creado por Justin Roiland y Dan Harmon.</p>
+        <p>Lanzamiento: 2013.</p>
+        <p>País de origen: EEUU.</p>
+      </section>
+      <!-- Agrego una línea para separar-->
+      <hr size="10px"/>
+      <!-- Comienzo sección de personajes -->
+      <section id="personajes" class="personajes">
+        <h2>Personajes</h2>
+        <article id="contenedor-grilla">
+          <!-- Aquí irá el contenido renderizado por javascript utilizando la api,
+           mientras tanto algunas imágenes para no desesperar-->
+          <div>
+            <p><b>Rick Sanchez</b></p>
+            <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="Rick Sanchez">
+            <p><b>Morty Smith</b></p>
+            <img src="https://rickandmortyapi.com/api/character/avatar/2.jpeg" alt="Morty Smith">
+            <p><b>Summer Smith</b></p>
+            <img src="https://rickandmortyapi.com/api/character/avatar/3.jpeg" alt="Summer Smith">
+          </div>
+        </article>
+      </section>
+      <!-- Agrego una línea para separar-->
+      <hr size="10px"/>
+      <!-- Comienzo sección de ver serie -->
+      <section id="ver-serie" class="ver-serie">
+        <a href="https://www.hbomax.com/ar/es/series/urn:hbo:series:GXkRjxwjR68PDwwEAABKJ?countryRedirect=1" alt="Mira Rick y Morty ahora!">
+          <img src="https://rickandmorty-finalproject-mairaledesma.vercel.app/img/logo-hbomax.webp" alt="logo HBO Max"/></a>
+        <h2>Mirá la serie!</h2>
+        <p>
+            Las 6 temporadas de Rick y Morty están disponibles en HBO Max. Tiene un total de 61 episodios.
+        </p>
+      </section>
+    </main>
+    <!-- Agrego una línea para separar-->
+    <hr size="10px"/>
+    <footer>
+      <!-- Opté por usar la etiqueta div-->  
+      <div>
+        <!-- Introduje un emoji del cerebro-->
+        <!-- En esta primera versión preferí agregar algunos modificadores de tipografía propios 
+        de html por un tema visual pero en las siguientes se utilizará CSS-->
+        <p><i>Hecho con el 🧠 por Rubén Falcón basado en el maquetado del profe.</i></p>
+        <p><i>Introducción a Frontend</i></p>
+        <p><i>Marzo 2023</i></p>
+        <p><i>Profesor: Gabriel Alberini</i></p>
+        <p><i>Argentina Programa 4.0 - C172</i></p>
+      </div>
+      <div>
+          <a href="https://github.com/RubenAlejandroFalcon" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/270/270798.png" alt="ícono de Github"></a>
+          <a href="mailto:rub.falcon78@gmail.com"> 
+            <img src="https://cdn-icons-png.flaticon.com/512/2504/2504727.png" alt="ícono de Gmail"></a>
+      </div>
+    </footer>
+  </body>
+</html>
