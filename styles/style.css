@@ -5,12 +5,12 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   
-  header, main, footer {
+ /* header, main, footer {
     padding: 20px;
-  }
+  }*/
   
   header {
-    background-color: rgb(128, 171, 199);
+    background-color: rgb(173, 203, 223);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,34 +44,52 @@
   }
   
   main {
-    display: flex;
-    flex-wrap: wrap;
+    background-image: url("../austria.jpg");
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
-  .bg-image {
-    opacity: 0.3;
-  }
-
-  .container {
-    width: 100%;
+  .contenedor-grilla {
+    padding: 30px;
     display: flex;
+    /*flex-wrap: wrap;*/
     justify-content: center;
+    width: 1260px;
+    overflow-x: scroll;
   }
   
-  .grid-item {
-    width: 200px;
-    background-color:crimson;
-    padding: 20px;
+  .grilla-item {
+    background-color: tomato;
+    padding: 30px;
     text-align: center;
-    border-radius: 20px;
+    width: 200px;
+    border-radius: 10px;
+    margin: 10px;
   }
   
-  .grid-item img {
+  .grilla-item p {
+    padding: 1px;
+    font-size: 68%;
+  }
+  .grilla-item img {
     width: 100%;
     border-radius: 50%;
   }
   
+  .ver-serie {
+    display: flex;
+  }
+
+  .ver-serie img {
+    width: 250px;
+  }
+
+  .ver-serie div {
+    text-align: center;
+    margin: 80px;
+  }
+
   footer {
     background-color: brown;
     display: flex;
@@ -88,6 +106,12 @@
     padding: 10px;
   }
   
+  footer div img{
+    margin: 20px;
+    width: 80px;
+  }
+
+
   /*Media querie | punto de quiebre*/
   
   @media (max-width:880px) {
@@ -105,7 +129,7 @@
     }
   
     main {
-      background-image: url("https://cdn.pixabay.com/photo/2023/01/08/18/45/road-7705909_1280.jpg");
+      background-image: url("austria.png");
     }
   
     header ul {
