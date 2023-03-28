@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  header, main, footer {
+    padding: 20px;
+  }
+  
+  header {
+    background-color: rgb(128, 171, 199);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+ 
+  header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 178px;
+  }
+
+  header div img {
+    width: 150px;
+    }
+  
+  .LogoRickandMorty {
+        width: 250px;
+    }
+      
+  header ul {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+  }
+  
+  header ul li {
+    background-color: rgb(66, 201, 201);
+    padding: 25px;
+    border-radius: 25% 10%;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  
+  .bg-image {
+    opacity: 0.3;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .grid-item {
+    width: 200px;
+    background-color:crimson;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+  }
+  
+  .grid-item img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  
+  footer {
+    background-color: brown;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  footer ul {
+    list-style: none;
+  }
+  
+  footer ul li {
+    background-color: tomato;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  /*Media querie | punto de quiebre*/
+  
+  @media (max-width:880px) {
+    header {
+      background-color: red;
+    }
+  }
+  
+  @media(max-width: 480px) {
+  
+    header {
+      background-color: yellow;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    main {
+      background-image: url("https://cdn.pixabay.com/photo/2023/01/08/18/45/road-7705909_1280.jpg");
+    }
+  
+    header ul {
+      flex-direction: column;
+    }
+  
+    footer {
+      background-color: blue;
+    }
+  } 
