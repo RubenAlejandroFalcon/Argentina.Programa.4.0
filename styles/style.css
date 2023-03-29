@@ -5,9 +5,9 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   
- /* header, main, footer {
+ header, main, footer {
     padding: 20px;
-  }*/
+  }
   
   header {
     background-color: rgb(173, 203, 223);
@@ -49,13 +49,19 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  
+
+  .sinopsis p {
+    font-style: italic;
+    font-weight: bold;
+    padding: 10px;
+  }
+
   .contenedor-grilla {
     padding: 30px;
     display: flex;
-    /*flex-wrap: wrap;*/
-    justify-content: center;
-    width: 1260px;
+    /*flex-wrap: wrap;
+    justify-content: center;*/
+    width: 1290px;
     overflow-x: scroll;
   }
   
@@ -91,7 +97,7 @@
   }
 
   footer {
-    background-color: brown;
+    background-color: rgb(185, 111, 111);
     display: flex;
     justify-content: space-between;
   }
@@ -108,35 +114,143 @@
   
   footer div img{
     margin: 20px;
-    width: 80px;
+    width: 58px;
   }
 
 
-  /*Media querie | punto de quiebre*/
+  @media (max-width:1250px) {
+
+    .contenedor-grilla {
+      width: 1000px;
+      /*overflow-x: scroll;*/
+    }
+
+  }
+
+  @media (max-width:950px) {
+
+    header {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    header div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    header ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      }
+
+    .contenedor-grilla {
+      width: 900px;
+      /*overflow-x: scroll;*/
+    }
+
+  }
   
   @media (max-width:880px) {
+
     header {
-      background-color: red;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    header div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    header ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      }
+
+    .contenedor-grilla {
+      width: 780px;
+      /*overflow-x: scroll;*/
     }
   }
   
+  @media (max-width:650px) {
+
+    header {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    header div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    header ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+    }
+
+    .contenedor-grilla {
+      width: 500px;
+      /*overflow-x: scroll;*/
+    }
+
+    footer div img{
+      margin: 5px;
+      width: 44px;
+      gap: 5px;
+    
+
+    }
+  }
+
   @media(max-width: 480px) {
   
     header {
-      background-color: yellow;
       flex-direction: column;
       gap: 10px;
     }
-  
-    main {
-      background-image: url("austria.png");
+    
+    header div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
     }
-  
+
     header ul {
+      list-style: none;
+      display: flex;
+      gap: 10px;
       flex-direction: column;
     }
-  
-    footer {
-      background-color: blue;
+
+    .contenedor-grilla {
+      width: 400px;
+      /*overflow-x: scroll;*/
     }
-  } 
+
+    footer div img{
+      margin: 5px;
+      width: 38px;
+      gap: 5px;
+ } 
+}
+
