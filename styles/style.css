@@ -59,8 +59,8 @@
   .contenedor-grilla {
     padding: 30px;
     display: flex;
-    /*flex-wrap: wrap;
-    justify-content: center;*/
+    /*flex-wrap: wrap;*/
+    justify-content: center;
     width: 1290px;
     overflow-x: scroll;
   }
@@ -85,6 +85,7 @@
   
   .ver-serie {
     display: flex;
+    align-items: center;
   }
 
   .ver-serie img {
@@ -93,24 +94,17 @@
 
   .ver-serie div {
     text-align: center;
-    margin: 80px;
+    margin: 50px;
   }
 
   footer {
     background-color: rgb(185, 111, 111);
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    
   }
   
-  footer ul {
-    list-style: none;
-  }
-  
-  footer ul li {
-    background-color: tomato;
-    margin: 10px;
-    padding: 10px;
-  }
   
   footer div img{
     margin: 20px;
@@ -211,14 +205,27 @@
       /*overflow-x: scroll;*/
     }
 
-    footer div img{
+    footer div img {
       margin: 5px;
       width: 44px;
       gap: 5px;
+    }
     
+    .ver-serie img {
+      width: 150px;
+    }
 
+  }
+
+  @media(max-width: 500px) {
+
+    footer {
+      flex-direction: column;
+      gap: 20px;
     }
   }
+
+
 
   @media(max-width: 480px) {
   
@@ -243,7 +250,7 @@
     }
 
     .contenedor-grilla {
-      width: 400px;
+      width: 358px;
       /*overflow-x: scroll;*/
     }
 
@@ -252,5 +259,56 @@
       width: 38px;
       gap: 5px;
  } 
+
+   .ver-serie img {
+    width: 80px;
+  }
+}
+
+@media(max-width: 400px) {
+  
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .contenedor-grilla {
+    width: 280px;
+    /*overflow-x: scroll;*/
+  }
+
+  footer div img{
+    margin: 5px;
+    width: 38px;
+    gap: 5px;
+  } 
+
+  .ver-serie img {
+    width: 80px;
+  }
+
+  .ver-serie div h2 {
+    font-size: smaller;
+  }
+
+  .ver-serie div p {
+    font-size: smaller;
+  }
+
 }
 
