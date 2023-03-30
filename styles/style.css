@@ -34,13 +34,13 @@
   header ul {
     list-style: none;
     display: flex;
-    gap: 80px;
+    gap: 70px;
   }
   
   header ul li {
     background-color: rgb(66, 201, 201);
     padding: 25px;
-    border-radius: 25% 10%;
+    border-radius: 25%;
   }
   
   main {
@@ -50,17 +50,31 @@
     background-size: cover;
   }
 
+  .sinopsis h2 {
+    background-color: rgba(173, 203, 223, 0.5);
+    padding: 15px;
+    border-radius: 15%;
+    text-align: center;
+  }
+
   .sinopsis p {
     font-style: italic;
     font-weight: bold;
     padding: 10px;
   }
 
+  .personajes h2 {
+    background-color: rgba(173, 203, 223, 0.5);
+    padding: 15px;
+    border-radius: 15%;
+    text-align: center;
+    }
+
   .contenedor-grilla {
-    padding: 30px;
+    padding: 20px;
     display: flex;
     /*flex-wrap: wrap;*/
-    justify-content: center;
+    justify-content: left;
     width: 1290px;
     overflow-x: scroll;
   }
@@ -250,7 +264,7 @@
     }
 
     .contenedor-grilla {
-      width: 358px;
+      width: 378px;
       /*overflow-x: scroll;*/
     }
 
@@ -288,7 +302,7 @@
   }
 
   .contenedor-grilla {
-    width: 280px;
+    width: 320px;
     /*overflow-x: scroll;*/
   }
 
