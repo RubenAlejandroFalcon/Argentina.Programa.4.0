@@ -10,4 +10,5 @@ function actualizarAnchoDeCaja() {
   
   // Ejecuta la función cada vez que se redimensiona la ventana del navegador
   window.addEventListener('resize', actualizarAnchoDeCaja);
+  window.addEventListener('orientationchange', actualizarAnchoDeCaja);
   
