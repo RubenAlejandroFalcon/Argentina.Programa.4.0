@@ -1,26 +1,23 @@
-function actualizarAnchoDeCaja(boolchangeorientation = false) {
-
-  window.t = undefined;
-
-  if (boolchangeorientation) {
-
-    setTimeout('console.log("cambió la orientación");', 250);
-      
-  }
-
+function actualizarAnchoDeCaja() {
 
   let anchoDeVentana = window.innerWidth;
-    const caja = document.getElementById('contenedor-grilla');
-    anchoDeVentana = anchoDeVentana - 58;
-    caja.style.width = `${anchoDeVentana}px`;
-
-
-  }
+  const caja = document.getElementById('contenedor-grilla');
+  anchoDeVentana = anchoDeVentana - 58;
+  caja.style.width = `${anchoDeVentana}px`;
+}
   
+window.t = undefined;
+window.onorientationchange = function (event)
+{
+    window.t = setTimeout('actualizarAnchoDeCaja();', 250);
+}
+
   // Ejecuta la función al cargar la página
   actualizarAnchoDeCaja();
   
   // Ejecuta la función cada vez que se redimensiona la ventana del navegador
   window.addEventListener('resize', actualizarAnchoDeCaja);
-  window.addEventListener('orientationchange', actualizarAnchoDeCaja(true));
+
+  // Ejecuta la función cada vez que se cambia la orientación en el celular
+  //window.addEventListener('orientationchange', actualizarAnchoDeCaja);
   
