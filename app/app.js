@@ -22,7 +22,7 @@ function orientation_changed ()
 window.t = undefined;
 window.onorientationchange = function (event)
 {
-    window.t = setTimeout('orientation_changed();', 250);
+    window.t = setTimeout('orientation_changed();', 2500);
 }
 function is_landscape()
 {
