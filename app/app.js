@@ -9,7 +9,7 @@ function actualizarAnchoDeCaja() {
 window.t = undefined;
 window.onorientationchange = function (event)
 {
-    window.t = setTimeout('actualizarAnchoDeCaja();', 250);
+    window.t = setTimeout('actualizarAnchoDeCaja();', 2500);
 }
 
   // Ejecuta la función al cargar la página
