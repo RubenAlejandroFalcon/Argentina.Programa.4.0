@@ -10,6 +10,7 @@ window.t = undefined;
 window.onorientationchange = function (event)
 {
     window.t = setTimeout('actualizarAnchoDeCaja();', 2500);
+    this.alert("Cambio de orientación");
 }
 
   // Ejecuta la función al cargar la página
