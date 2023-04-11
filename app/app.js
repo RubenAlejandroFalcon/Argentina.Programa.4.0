@@ -6,52 +6,6 @@ function actualizarAnchoDeCaja() {
   caja.style.width = `${anchoDeVentana}px`;
 }
   
-function orientation_changed ()
-{
-    if ( is_portrait() )
-    {
-      actualizarAnchoDeCaja();
-    }
-    else if ( is_landscape() )
-    {
-      actualizarAnchoDeCaja();
-    }
-    clearTimeout(window.t);
-    delete window.t;
-}
-window.t = undefined;
-window.onorientationchange = function (event)
-{
-    window.t = setTimeout('orientation_changed();', 2500);
-}
-function is_landscape()
-{
-    var uagent = navigator.userAgent.toLowerCase();
-    if ( uagent.search('ipad') > -1 )
-    {
-        var r = ( window.orientation == 90 || window.orientation == -90 );
-    }
-    else
-    {
-        var r = ( screen.width > screen.height );
-    }
-    return r;
-}
-function is_portrait()
-{
-    var uagent = navigator.userAgent.toLowerCase();
-    if ( uagent.search('ipad') > -1 )
-    {
-        var r = ( window.orientation == 0 || window.orientation == 180 );
-    }
-    else
-    {
-        var r = ( screen.width < screen.height );
-    }
-    return r;
-}
-
-
 
 // Ejecuta la función al cargar la página
 actualizarAnchoDeCaja();
@@ -60,5 +14,33 @@ actualizarAnchoDeCaja();
 window.addEventListener('resize', actualizarAnchoDeCaja);
 
 // Ejecuta la función cada vez que se cambia la orientación en el celular, pero no tiene efecto
+// al volver del landscape
 //window.addEventListener('orientationchange', actualizarAnchoDeCaja);
   
+// Llamada a la API mediante fetch
+
+const API_BASE = "https://rickandmortyapi.com/api"
+const API_CHARACTERS = "https://rickandmortyapi.com/api/character"
+
+const llamadaApi = fetch(API_CHARACTERS);
+
+llamadaApi.then((data) => {
+    return data.json()
+}).then((data) => {
+    const $characters = document.getElementById("contenedor-grilla")
+    console.log(data.results[0])
+    for(let i = 0; i < data.results.length; i++) {
+        
+        $characters.innerHTML += `
+        <div class="grilla-item">
+                <img src=${data.results[i].image} alt="imagen de personaje"/>
+                <h3>${data.results[i].name}</h3>
+                <p>Gender: ${data.results[i].gender}</p>
+                <p>Species: ${data.results[i].species}</p>
+                <p>Status: ${data.results[i].status}</p>
+        </div>
+        `
+    }
+}).catch((error) => {
+    console.log(error)
+})

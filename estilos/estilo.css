@@ -4,13 +4,20 @@
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
-  
+
+  body {
+    background-image: url("../recursos/space_planets_stars.png");
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
  header, main, footer {
     padding: 20px;
   }
   
   header {
-    background-color: rgb(173, 203, 223);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,25 +45,42 @@
   }
   
   header ul li {
-    background-color: rgb(66, 201, 201);
+    font-size: larger;
+    font-weight: bold;
     padding: 25px;
     border-radius: 25%;
     align-items: center;
     justify-content: center;
   }
 
-  main {
-    background-image: url("../recursos/austria.jpg");
-    position: relative;
+  header ul li a {
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: cover;
-  }
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+header ul li a:hover, header ul li a:focus {
+    background-size: 100% 2px;
+}
 
   .sinopsis h2 {
     background-color: rgba(173, 203, 223, 0.5);
     padding: 15px;
     border-radius: 15%;
     text-align: center;
+  }
+
+  .imagensinopsis {
+    width: 200px;
+  }
+
+  .sinopsis div {
+    display: flex;
+    padding: 20px;
+    gap: 50px;
   }
 
   .sinopsis p {
@@ -77,13 +101,12 @@
     display: flex;
     /*flex-wrap: wrap;*/
     justify-content: left;
-    /*width: 1290px;*/
     overflow-x: scroll;
   }
   
   .grilla-item {
-    background-color: tomato;
-    padding: 30px;
+    background-color: rgba(179, 147, 216, 0.5);
+    padding: 20px;
     text-align: center;
     width: 200px;
     border-radius: 10px;
@@ -92,13 +115,17 @@
   
   .grilla-item p {
     padding: 1px;
-    font-size: 68%;
+    font-size: 12px;
   }
   .grilla-item img {
-    width: 100%;
+    width: 100px;
     border-radius: 50%;
   }
-  
+  .grilla-item:hover{
+    background-color: rgb(158, 121, 192);
+    box-shadow: 0 0 15px 0 white;
+  }  
+    
   .ver-serie {
     display: flex;
     align-items: center;
@@ -114,11 +141,9 @@
   }
 
   footer {
-    background-color: rgb(185, 111, 111);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
   }
   
   
