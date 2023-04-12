@@ -1,3 +1,4 @@
+
 function actualizarAnchoDeCaja() {
 
   let anchoDeVentana = window.innerWidth;
@@ -6,7 +7,6 @@ function actualizarAnchoDeCaja() {
   caja.style.width = `${anchoDeVentana}px`;
 }
   
-
 // Ejecuta la función al cargar la página
 actualizarAnchoDeCaja();
   
@@ -16,7 +16,11 @@ window.addEventListener('resize', actualizarAnchoDeCaja);
 // Ejecuta la función cada vez que se cambia la orientación en el celular, pero no tiene efecto
 // al volver del landscape
 //window.addEventListener('orientationchange', actualizarAnchoDeCaja);
-  
+
+
+
+
+
 // Llamada a la API mediante fetch
 
 const API_BASE = "https://rickandmortyapi.com/api"
@@ -44,3 +48,18 @@ llamadaApi.then((data) => {
 }).catch((error) => {
     console.log(error)
 })
+
+
+
+
+//scroll horizontal con la rueda del mouse
+const element = document.querySelector("#contenedor-grilla");
+
+element.addEventListener('wheel', (event) => {
+  event.preventDefault();
+
+  element.scrollBy({
+    left: event.deltaY < 0 ? -30 : 30,
+    
+  });
+});
