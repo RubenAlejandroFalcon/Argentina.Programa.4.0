@@ -13,16 +13,25 @@ actualizarAnchoDeCaja();
 // Ejecuta la función cada vez que se redimensiona la ventana del navegador
 window.addEventListener('resize', actualizarAnchoDeCaja);
 
-// Ejecuta la función cada vez que se cambia la orientación en el celular, pero no tiene efecto
-// al volver del landscape
-//window.addEventListener('orientationchange', actualizarAnchoDeCaja);
+
+//orientationchange fires before the window resize event, 
+//which is not ideal when you need to resize content 
+//for the new viewport dimensions. 
+//This fix will allow you to handle orientation changes after the page has resized
+window.addEventListener("orientationchange", function() {
+  var orientationChange = function(evt) {
+    actualizarAnchoDeCaja();
+    window.removeEventListener('resize', orientationChange);
+  }
+  window.addEventListener('resize', orientationChange);
+}, false);
+
 
 
 
 
 
 // Llamada a la API mediante fetch
-
 const API_BASE = "https://rickandmortyapi.com/api"
 const API_CHARACTERS = "https://rickandmortyapi.com/api/character"
 
@@ -48,6 +57,9 @@ llamadaApi.then((data) => {
 }).catch((error) => {
     console.log(error)
 })
+
+
+
 
 
 
