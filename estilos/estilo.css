@@ -103,8 +103,25 @@ header ul li a:hover, header ul li a:focus {
     /*flex-wrap: wrap;*/
     justify-content: left;
     overflow-x: scroll;
+    scrollbar-color: dark;
+    scrollbar-width: thin;
   }
   
+  .contenedor-grilla::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /*.contenedor-grilla::-webkit-scrollbar-track {
+    background: dark;
+  }*/
+  
+  .contenedor-grilla::-webkit-scrollbar-thumb {
+    background-color: rgba(158, 78, 78, 0.6);
+    border-radius: 20px;
+   /* border: 3px solid orange;*/
+  }
+
+
   .grilla-item {
     background-color: rgba(179, 147, 216, 0.5);
     padding: 20px;
@@ -140,6 +157,20 @@ header ul li a:hover, header ul li a:focus {
   .ver-serie div {
     text-align: center;
     margin: 50px;
+  }
+
+  .ver-serie div h2 a {
+    color: black;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+  }
+
+  .ver-serie div h2 a:hover, .ver-serie div h2 a:focus {
+    background-size: 100% 2px;
   }
 
   footer {
@@ -234,7 +265,7 @@ header ul li a:hover, header ul li a:focus {
     }
     
     .ver-serie img {
-      width: 150px;
+      width: 180px;
     }
 
   }
@@ -284,7 +315,7 @@ header ul li a:hover, header ul li a:focus {
  } 
 
    .ver-serie img {
-    width: 80px;
+    width: 135px;
   }
 }
 
@@ -323,7 +354,7 @@ header ul li a:hover, header ul li a:focus {
   } 
 
   .ver-serie img {
-    width: 80px;
+    width: 110px;
   }
 
   .ver-serie div h2 {
