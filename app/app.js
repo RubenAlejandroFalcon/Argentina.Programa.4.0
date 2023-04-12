@@ -13,18 +13,8 @@ actualizarAnchoDeCaja();
 // Ejecuta la función cada vez que se redimensiona la ventana del navegador
 window.addEventListener('resize', actualizarAnchoDeCaja);
 
-
-//orientationchange fires before the window resize event, 
-//which is not ideal when you need to resize content 
-//for the new viewport dimensions. 
-//This fix will allow you to handle orientation changes after the page has resized
-window.addEventListener("orientationchange", function() {
-  var orientationChange = function(evt) {
-    actualizarAnchoDeCaja();
-    window.removeEventListener('resize', orientationChange);
-  }
-  window.addEventListener('resize', orientationChange);
-}, false);
+// Ejecuta la función al cambiar la orientación del móvil
+window.addEventListener("orientationchange", actualizarAnchoDeCaja);
 
 
 
@@ -41,7 +31,7 @@ llamadaApi.then((data) => {
     return data.json()
 }).then((data) => {
     const $characters = document.getElementById("contenedor-grilla")
-    console.log(data.results[0])
+    //console.log(data.results[0])
     for(let i = 0; i < data.results.length; i++) {
         
         $characters.innerHTML += `
