@@ -13,7 +13,9 @@ actualizarAnchoDeCaja();
 // Ejecuta la función cada vez que se redimensiona la ventana del navegador.
 // Por alguna razón en los móviles que he probado, al volver del landscape,
 // no se actualiza adecuadamente el ancho del contenedor-grilla. Éste se va
-// acomodando haciendo scroll vertical continuado. 
+// acomodando haciendo scroll vertical continuado. Estuve probando mucho 
+// código que aborda el inconveniente pero no han tenido efecto, se agradece 
+// cualquier pista para arreglarlo.
 window.addEventListener('resize', actualizarAnchoDeCaja);
 
 
